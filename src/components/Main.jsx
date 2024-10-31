@@ -6,6 +6,7 @@ import How from './How'
 import MoneyTransfer from './MoneyTransfer'
 import Reviews from './Reviews'
 import FAQ from './FAQ'
+import Subscribe from './Subscribe'
 
 const Main = () => {
   return (
@@ -17,6 +18,7 @@ const Main = () => {
       <MoneyTransfer />
       <Reviews />
       <FAQ />
+      <Subscribe />
     </main>
   )
 }
