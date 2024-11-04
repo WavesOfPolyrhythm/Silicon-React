@@ -1105,6 +1105,8 @@ img {
 
 /******************FAQ SECTION START***************/
 
+/*Tog mycket inspiration från Jockes accordion video för att bygga och styla en fungerande accordion*/
+
 .section-faq{
   overflow: hidden;
   padding-top: 3rem;
@@ -1185,6 +1187,9 @@ img {
       padding: 0 .7rem;
     }
     
+    .expandable {
+      min-height: 0px;
+    }
     .open .answer {
       grid-template-rows: 1fr;
       padding: 1rem;
@@ -1196,9 +1201,6 @@ img {
       transform: rotate(180deg);
     }
     
-    .expandable {
-      min-height: 0px;
-    }
 
     .contact-cards {
       display: none;
