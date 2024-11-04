@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+{/* This section is a combination of Joakims condition rendering-video and help from ChatGPT to make the accordion work */}
+
 const FAQForm = () => {
   const questions = [
     { id: 1, question: "Is any of my personal information stored in the App?", answer: "Yes, some data is stored in the App" },
