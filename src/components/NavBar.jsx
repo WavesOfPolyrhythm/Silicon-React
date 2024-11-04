@@ -1,16 +1,21 @@
 import React from 'react'
 
+
+
+
+
+
+
 const NavBar = () => {
   return (
     
       <ul id="nav-menu" className="nav-menu">
-        <li>
+          <li>
               <a className="nav-link" href="#">Features</a>
-        </li>
-         <li>
+          </li>
+          <li>
               <a className="nav-link" href="#">Contact</a>
-        </li>
-        
+          </li>
       </ul>
     
   )

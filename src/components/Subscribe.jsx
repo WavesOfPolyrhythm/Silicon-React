@@ -8,26 +8,26 @@ const Subscribe = () => {
 
       <Container>
       
-      <div className="item-group">
+          <div className="item-group">
 
-      <div className="image-container">
-        <img src={SubscribeIcon} alt=""/>
-      </div>
+              <div className="image-container">
+                <img src={SubscribeIcon} alt=""/>
+              </div>
 
-      <div className="header">
-      <h2>Subscribe to our <br className="break"/> newsletter </h2>
-      </div>
-
-      </div>
+              <div className="header">
+              <h2>Subscribe to our <br className="break"/> newsletter </h2>
+              </div>
+          </div>
 
         <div className="input-flex">
           <i className="fa-regular fa-envelope icon"></i>
-    <input className="form-input email" type="email" placeholder="Your email"/>
-    <button className="btn">Subscribe</button>
-  </div>
-</Container>
+          <input className="form-input email" type="email" placeholder="Your email"/>
+          <button className="btn">Subscribe</button>
+        </div>
+
+      </Container>
  
-  </section>
+    </section>
   )
 }
 

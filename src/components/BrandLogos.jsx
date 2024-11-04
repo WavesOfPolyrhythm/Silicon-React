@@ -11,7 +11,6 @@ const BrandLogos = () => {
   return (
     <section className="section-logos">
           
-
           <Container>
 
               <div id="brand-1" className="brand-box">
