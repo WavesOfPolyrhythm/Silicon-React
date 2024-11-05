@@ -1359,6 +1359,7 @@ img {
 /********SUBSCRIBE START"*****/
 
 .subscribe {
+  min-width: 450px;
   max-width: 95%;
   margin: auto;
   padding: 2.5rem;
@@ -1447,6 +1448,7 @@ img {
     position: absolute;
     top: 6rem;
     right: 9rem;
+    
     .error {
       color: firebrick;
       font-size: .75rem;
