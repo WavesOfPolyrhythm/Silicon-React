@@ -2,6 +2,8 @@ import React from 'react'
 import Container from './Container'
 import SubscribeIcon from '../assets/images/p5-subscribe.svg'
 
+const [errors, setErrors] = useState({})
+
 const Subscribe = () => {
   return (
     <section className="subscribe">

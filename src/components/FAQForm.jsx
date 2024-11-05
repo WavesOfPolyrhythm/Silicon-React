@@ -1,41 +1,47 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-{/* This section is a combination of Joakims condition rendering-video and help from ChatGPT to make the accordion work */}
+/* This section is a combination of Joakim's conditional rendering video, Hans WebAPI and help from ChatGPT to make this work step by step */
 
 const FAQForm = () => {
-  const questions = [
-    { id: 1, question: "Is any of my personal information stored in the App?", answer: "Yes, some data is stored in the App" },
-    { id: 2, question: "What formats can I download my transaction history in?", answer: "Ornare senectus fusce dignissim ut." },
-    { id: 3, question: "Can I schedule future transfers?", answer: "Ornare senectus fusce dignissim ut." },
-    { id: 4, question: "When can I use Banking App services?", answer: "Ornare senectus fusce dignissim ut." },
-    { id: 5, question: "Can I create my own password that is easy for me to remember?", answer: "Ornare senectus fusce dignissim ut." },
-    { id: 6, question: "What happens if I forget or lose my password?", answer: "Ornare senectus fusce dignissim ut." },
-  ];
-
-  const [showAnswer, setShowAnswer] = useState(false);
+  const [faqItems, setFAQItems] = useState([]);
   const [activeQuestionId, setActiveQuestionId] = useState(null);
 
-  const toggleAnswer = (id) => {   {/*Tar ID som argument*/}
-    setActiveQuestionId(prevId => (prevId === id ? null : id)); {/* Om man klickar på den öppna frågan så stänger den sig igen */}
-    setShowAnswer(prevId => (activeQuestionId === id ? false : true)); /* Växlar showAnswer till true om en ny fråga öppnas eller false om den klickade frågan redan är öppen */
+  // Funktion för att hämta data från API
+  const fetchData = async () => {
+    const res = await fetch('https://win24-assignment.azurewebsites.net/api/faq');
+    const data = await res.json();
+    setFAQItems(data);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []); // Kör endast när komponenten laddas
+
+  // Tar ID som argument för att växla mellan att visa och dölja svaret
+  const toggleAnswer = (id) => {  
+    setActiveQuestionId(prevId => (prevId === id ? null : id));
   };
 
   return (
     <div className="form-container">
-      {questions.map((item) => (
-        <div key={item.id} className={`forms ${activeQuestionId === item.id && showAnswer ? 'open' : ''}`}> {/* Lägger till klassen Open om villkoren stämmer*/}
+      {faqItems.map((item) => (
+        <div key={item.id} className={`forms ${activeQuestionId === item.id ? 'open' : ''}`}>
+          {/* Lägger till klassen "open" om villkoret stämmer */}
 
-          <div className="question" onClick={() => toggleAnswer(item.id)}> {/* Lägger till onClick händelse och anropar toggleAnswer */}
-            <h3>{item.question}</h3>
+          <div className="question" onClick={() => toggleAnswer(item.id)}>
+            {/* Lägger till onClick-händelse och anropar toggleAnswer */}
+            <h3>{item.title}</h3>
             <button className="btn-round">
-              <i className={`fa-solid fa-chevron-${activeQuestionId === item.id && showAnswer ? 'up' : 'down'}`}></i> {/* Ändrar namnet på pilens riktning */}
+              <i className={`fa-solid fa-chevron-${activeQuestionId === item.id ? 'up' : 'down'}`}></i>
+              {/* Ändrar pilens riktning beroende på om frågan är öppen */}
             </button>
           </div>
 
-          {activeQuestionId === item.id && showAnswer && ( {/* Kollar om activeQuestionId matchar frågans id och om showAnswer är true */},
+          {/* Kollar om activeQuestionId matchar frågans id */}
+          {activeQuestionId === item.id && (
             <div className="answer">
               <div className="expandable">
-                <p>{item.answer}</p>
+                <p>{item.content}</p>
               </div>
             </div>
           )}
