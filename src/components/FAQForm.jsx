@@ -32,7 +32,7 @@ const FAQForm = () => {
             {/* Lägger till onClick-händelse och anropar toggleAnswer */}
             <h3>{item.title}</h3>
             <button className="btn-round">
-              <i className={`fa-solid fa-chevron-${activeQuestionId === item.id ? 'up' : 'down'}`}></i>
+            <i class="fa-solid fa-chevron-down"></i>
             </button>
           </div>
 
