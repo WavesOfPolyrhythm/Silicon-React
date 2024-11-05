@@ -33,18 +33,15 @@ const FAQForm = () => {
             <h3>{item.title}</h3>
             <button className="btn-round">
               <i className={`fa-solid fa-chevron-${activeQuestionId === item.id ? 'up' : 'down'}`}></i>
-              {/* Ändrar pilens riktning beroende på om frågan är öppen */}
             </button>
           </div>
 
-          {/* Kollar om activeQuestionId matchar frågans id */}
-          {activeQuestionId === item.id && (
+
             <div className="answer">
               <div className="expandable">
                 <p>{item.content}</p>
               </div>
             </div>
-          )}
         </div>
       ))}
     </div>

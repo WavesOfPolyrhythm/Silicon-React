@@ -1369,6 +1369,7 @@ img {
   border-radius: .5rem;
 
   .container {
+    position: relative;
     max-width: 450px;
 
   .item-group {
@@ -1419,10 +1420,10 @@ img {
   
 
   .input-flex {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
   
     .form-input {
       border-radius: .5rem 0 0 .5rem;
@@ -1443,6 +1444,17 @@ img {
   .email {
     padding-left: 4rem;
   }
+
+  .error-section {
+    position: absolute;
+    top: 5.5rem;
+    right: 9rem;
+    .error {
+      color: firebrick;
+      font-size: .75rem;
+      font-weight: var(--font-weight-600);
+    }
+  }
   
 }
 
@@ -1454,6 +1466,10 @@ img {
       flex-direction: row;
       justify-content: center;
       align-items: center;
+
+      .error-section {
+        top: 4.5rem;
+      }
   
       .item-group {
         display: flex;
@@ -1499,6 +1515,10 @@ img {
         max-width: 1250px;
         justify-content: center;
         align-items: center;
+
+        .error-section {
+          right: 23rem;
+        }
     
         .item-group {
           display: flex;
