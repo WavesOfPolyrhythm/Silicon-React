@@ -1,11 +1,6 @@
 import React from 'react'
 
 
-
-
-
-
-
 const DarkToggle = () => {
   return (
     <div id="darkmode-toggle" className="darkmode-toggle">

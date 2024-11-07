@@ -2,7 +2,7 @@ import React from 'react'
 
 
  {/* Help from Hans WebApi video and Jockes how to loop in react combined with a little help from ChatGPT */}
-const ReviewItem = ({ reviews, QuoationIcon, Rating4, Rating5 }) => {
+const ReviewItem = ({ reviews, QuotationIcon, ratingImages }) => {
 
 
   return (
@@ -10,11 +10,11 @@ const ReviewItem = ({ reviews, QuoationIcon, Rating4, Rating5 }) => {
       {reviews.map(review => (
       <div key={review.id} className="card">
         <div className="quotation-icon">
-          <img src={QuoationIcon} alt="quotation marks"/>
+          <img src={QuotationIcon} alt="quotation marks"/>
         </div>
 
           <img className="rating"
-          src={review.starRating === 5 ? Rating5 : Rating4} //Code snip from Chat GPT
+          src={ratingImages[review.starRating]} //Code snip from Chat GPT
           alt={`${review.starRating} star rating`} /> 
           <div className="card-text">
             <p>{review.comment}</p>

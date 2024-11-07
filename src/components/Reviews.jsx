@@ -1,13 +1,18 @@
   import React, {useState, useEffect} from 'react'
   import Container from './Container'
-  import QuoationIcon from '../assets/images/p5-quote.svg'
+  import QuotationIcon from '../assets/images/p5-quote.svg'
   import Rating4 from '../assets/images/p5-rating-4.svg'
   import Rating5 from '../assets/images/p5-rating-5.svg'
   import ReviewItem from './ReviewItem'
 
+  const ratingImages = {
+    4: Rating4,
+    5: Rating5,
+  };
+
   
   const Reviews = () => {
-    const [reviews, setReviews] =useState([])
+    const [reviews, setReviews] =useState([]);
 
     const fetchData = async () => {
       const res = await fetch ('https://win24-assignment.azurewebsites.net/api/testimonials')
@@ -28,7 +33,7 @@
                 <div className="headline">
                   <h2>Clients are <br/>Loving Our App</h2>
                 </div>
-                <ReviewItem reviews={reviews} QuoationIcon={QuoationIcon} Rating4={Rating4} Rating5={Rating5}/>
+                <ReviewItem reviews={reviews} QuotationIcon={QuotationIcon} ratingImages={ratingImages}/>
              </div>
         </Container>
     </section>
