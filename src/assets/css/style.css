@@ -9,8 +9,6 @@
 body {
   font-family: "Montserrat", serif;
   line-height: 1.5;
-  background-color: var(--clr-bg);
-  color: var(--clr-text-body);
 }
 
 input, button, textarea, select {
@@ -21,6 +19,10 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
   color: var(--clr-text-heading);
   line-height: 1.5;
+}
+
+p {
+  color: var(--clr-text-body);
 }
 
 ol,ul {
@@ -125,13 +127,14 @@ img {
 
   --border-radius--btn-primary: .3rem;
   
-  .dark {
-  --clr-dark-bg: #0B0F19;
-  --clr-dark-text: white;
-  --clr-dark-button-bg: #F3F6FF;
-  --clr-dark-button-text: #33354D;
-    }
   }
+
+  .dark {
+    --clr-bg: #131022;
+    --clr-gray-900: #9397AD;
+    --clr-text-heading: #fff;
+    --clr-text-body: #fff;
+      }
 
   .btn-primary {
     background-color: var(--clr-primary);
@@ -715,6 +718,10 @@ img {
 /**********APP FEATURES END**********/
 
 /****HOW DOES IT WORK START******/
+
+.dark {
+  
+}
 
 .section-how {
   min-width: 450px;
