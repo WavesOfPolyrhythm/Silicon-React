@@ -94,17 +94,17 @@ img {
   --clr-text-body: #585C7B;
   --clr-text-heading: #0B0F19;
   --clr-text-nav: #33354D;
-  
-  
-  --font-size-h1-40: 2.5rem;
-  --font-size-h2-32: 2rem;
-  --font-size-h3-28: 1.75rem;
-  --font-size-h4-24: 1.5rem;
-  --font-size-h5-20: 1.25rem;
-  --font-size-h6-16: 1rem;
-  
+
+  /*Buttons*/
+  --clr-white-to-gray: #fff;
+  --clr-button-arrow: #585C7B;
   
   --clr-bg: #fff;
+  --clr-bg-HowSection: #F3F6FF;
+  --clr-bg-Reviews: #F3F6FF;
+  --clr-bg-Review-Cards: #fff;
+  --clr-bg-FAQ-Questions: #fff;
+  --clr-bg-Subscribe: #F3F6FF;
   --clr-white: #fff;
   --clr-gray-100: #F3F6FF;
   --clr-gray-200: #EFF2FC;
@@ -117,6 +117,13 @@ img {
   --clr-gray-900: #0B0F19;
   
   --container-padding: 1rem;
+
+  --font-size-h1-40: 2.5rem;
+  --font-size-h2-32: 2rem;
+  --font-size-h3-28: 1.75rem;
+  --font-size-h4-24: 1.5rem;
+  --font-size-h5-20: 1.25rem;
+  --font-size-h6-16: 1rem;
   
   --font-weight-400:400;
   --font-weight-600:600;
@@ -130,9 +137,18 @@ img {
   }
 
   .dark {
-    --clr-bg: #131022;
+    --clr-bg: #0B0F19;
+    --clr-bg-nav: #060912e8;
+    --clr-bg-HowSection: #0b0f19ee;
+    --clr-bg-Reviews: #0b0f19ee;
+    --clr-bg-Review-Cards: #0b0f1942;
+    --clr-bg-FAQ-Questions: #151729f6;
+    --clr-bg-Subscribe: #38393d52;
+    --clr-white-to-gray: rgba(255, 255, 255, 0.5);
+    --clr-button-arrow: var(--clr-white);
     --clr-gray-900: #9397AD;
     --clr-text-heading: #fff;
+    --clr-text-nav: #fff;
     --clr-text-body: #fff;
       }
 
@@ -152,6 +168,9 @@ img {
   /************ Navbar Start********/
 
   .main-menu {
+    padding-bottom: 1rem;
+    background-color: var(--clr-bg-nav);
+    background-image: var(--clr-primary-linear-gradient);
 
     display: flex;
 
@@ -172,9 +191,25 @@ img {
         position: relative;
       }
 
-      .logo {
-        margin-top: .5rem;
+      .silicon-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        .logo {
+          margin-top: .5rem;
+        }
+  
+        .silicon-text {
+          margin-top: .75rem;
+          font-size: 1.2rem;
+          font-weight: var(--font-weight-600);
+        }
+
       }
+
+   
 
       .darkmode-toggle {
         top: 1.85rem;
@@ -188,6 +223,7 @@ img {
 
       .label {
         font-weight: var(--font-weight-600);
+        color: var(--clr-text-nav);
       }
 
       .toggle { 
@@ -436,9 +472,8 @@ img {
   
       
       .btn-white {
-      background-color: var(--clr-white);
-      color: var(--clr-gray-700);
-      box-shadow: 0 0 6px var(--clr-gray-300), 1px 2px 2px var(--clr-gray-300);
+      background-color: var(--clr-white-to-gray);
+      color: var(--clr-button-arrow);
       }
     }
   
@@ -578,6 +613,7 @@ img {
 /**********LOGOS START********/
 
 .section-logos {
+  background-color: var(--clr-bg);
   display: none;
   padding-top: 4rem;
 
@@ -632,12 +668,14 @@ img {
 
 
 .app-features {
+  background-color: var(--clr-bg);
 
   min-width: 450px;
 
 .container {
 
-  margin-top: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
   .features-iphone-image {
     display: none;
@@ -719,18 +757,14 @@ img {
 
 /****HOW DOES IT WORK START******/
 
-.dark {
-  
-}
 
 .section-how {
   min-width: 450px;
-  background-color: var(--clr-gray-100);
+  background-color: var(--clr-bg-HowSection);
   text-align: center;
 
   .container {
-    margin-top: 5rem;
-    padding: 3rem;
+    padding: 4rem;
   }
 }
 
@@ -953,7 +987,9 @@ img {
 /*MONEY TRANSFER START*/
 
 .section-money {
-  margin: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: var(--clr-bg);
 
   .container-grid {
     display: grid;
@@ -1031,7 +1067,7 @@ img {
 
 .section-reviews {
   display:none;
-  background-color: var(--clr-gray-100);
+  background-color: var(--clr-bg-Reviews);
 
 }
 
@@ -1057,7 +1093,7 @@ img {
     position: relative;
     
     .card {
-      background-color: var(--clr-white);
+      background-color: var(--clr-bg-Review-Cards);
       padding: 3rem 1rem 1rem 1rem;
       border-radius: .5rem;
       box-shadow: 0 0 5px rgba(177, 177, 177, 0.377);
@@ -1124,8 +1160,6 @@ img {
 
   .container {
 
-    padding-bottom: 2rem;
-
     .headline {
       margin-bottom: 1rem;
 
@@ -1149,6 +1183,7 @@ img {
     }
 
     .question {
+      background-color: var(--clr-bg-FAQ-Questions);
       padding: 1rem;
       display: flex;
       justify-content: space-between;
@@ -1186,6 +1221,7 @@ img {
     }
 
     .answer {
+      background-color: var(--clr-bg-FAQ-Questions);
       display: grid;
       grid-template-rows: 0fr;
       overflow: hidden;
@@ -1366,96 +1402,92 @@ img {
 /********SUBSCRIBE START"*****/
 
 .subscribe {
+  background-color: var(--clr-bg);
+  min-width: 380px;
+  padding-top: 1rem;
   min-width: 450px;
-  max-width: 95%;
   margin: auto;
-  padding: 2.5rem;
-  background-color: var(--clr-gray-bg-p3);
-  display: flex;
-  flex-direction: column;
-  border-radius: .5rem;
 
   .container {
-    position: relative;
-    max-width: 380px;
-
-  .item-group {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin-bottom: 2.5rem;
-    gap: 1.5rem;
     
-  }
+    .subscribe-box {
+      background-color: var(--clr-bg-Subscribe);
+      padding: 2rem;
+      border-radius: .5rem;
+      gap: 1rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      
 
-  .image-container {
-    img {
-      width: 4.25rem;
+        .item-group {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          padding-bottom: 1.5rem;
+          gap: 1rem;
+          
+        }
+
+      .header {
+        h2 {
+          font-size: 1.25rem;
+          line-height: normal;
+          font-weight: var(--font-weight-700);
+        }
+        h2::after {
+          content: '';
+        }
+      }
     }
   }
 
-  .header {
-    h2 {
-      font-size: 1.25rem;
-      font-weight: var(--font-weight-700);
-    }
-    h2::after {
-      content: '';
-    }
-  }
-}
-
-
-.btn {
-  background-color: var(--clr-primary);
-  color: white;
-  padding: 1rem 1.25rem;
-  border: none;
-  font-size: .9rem;
-  cursor: pointer;
-  font-weight: var(--font-weight-400);
-  }
-  
-  .form-input {
-    border: 1px solid #d3d2d2;
-    border-right: none;
-    font-size: .8rem;
+  .btn {
+    background-color: var(--clr-primary);
+    color: white;
+    padding: .9rem 1.25rem;
+    border: none;
+    cursor: pointer;
     font-weight: var(--font-weight-400);
-    padding: 1rem 1.8rem;
-  }
-  
-
-  .input-flex {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    .form-input {
-      border-radius: .5rem 0 0 .5rem;
     }
-    .btn {
-          border-radius: 0 .5rem .5rem 0;
-    }
-  }
   
-  .icon {
-    position: absolute;
-    top: 35%;
-    right:85%;
-    font-size: 1rem;
-    opacity:70%;
-  }
-  
-  .email {
-    padding-left: 4rem;
-  }
+      .form-input {
+        border: 1px solid #d3d2d2;
+        border-right: none;
+        font-size: .8rem;
+        font-weight: var(--font-weight-400);
+        padding: 1rem 2.5rem;
+      }
 
-  .error-section {
-    position: absolute;
-    top: 6rem;
-    right: 9rem;
-    
+          .input-flex {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
+            .form-input {
+              border-radius: .5rem 0 0 .5rem;
+            }
+            .btn {
+                  border-radius: 0 .5rem .5rem 0;
+            }
+          }
+  
+        .icon {
+          position: absolute;
+          top: 35%;
+          right: 90%;
+          font-size: 1rem;
+          opacity:70%;
+        }
+
+      .error-section {
+        position: absolute;
+        top: 9rem;
+        right: 13rem;
+      
     .error {
       color: firebrick;
       font-size: .75rem;
@@ -1467,112 +1499,71 @@ img {
 
   @media (min-width: 768px) {
 
-    .subscribe .container {
-      max-width: 650px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-
-      .error-section {
-        top: 4.5rem;
-      }
-  
-      .item-group {
-        display: flex;
-        align-items: center;
-        gap: 1.8rem;
-        margin-right: 3rem;
-        margin-bottom: 0;
+    .subscribe {
+      padding-top: 2rem;
+    
+      .container {
         
-  
-        .header {
-          h2 {
-            margin: 0;
-            font-size: 1.20rem;
-            font-weight: var(--font-weight-700);
+        .subscribe-box {
+          min-width: 700px;
+          flex-direction: row;
+          justify-content: space-around;
+    
+            .item-group {
+              padding-bottom: 0rem;
+              gap: 2rem;
+            }
           }
-        }     
+        }
+      
+      .error-section {
+        top: 6.75rem;
+        right: 12.5rem;
       }
-  
-      .btn {
-        padding: 1rem 1.5rem;
-        font-size: .8rem;
-        }
-  
-        .form-input {
-          font-size: .8rem;
-          font-weight: var(--font-weight-400);
-          padding: 1rem 1.8rem;
-        }
-
-        .icon {
-          right:92%;
-        }
-        
-        .email {
-          padding-left: 2rem;
-        }
-      }
-    }
+    } 
+  }
   
     @media (min-width:1400px) {
   
-      .subscribe .container {
-        max-width: 1250px;
-        justify-content: center;
-        align-items: center;
+      .subscribe {
+        padding-top: 2rem;
+      
+        .container {
 
+          .subscribe-box {
+            min-width: 700px;
+            flex-direction: row;
+            justify-content: space-around;
+      
+            .item-group {
+              .header {
+                max-width: 400px;
+    
+                .break {
+                  display:none;
+                }
+    
+                h2::after { /*Denna property tog jag hjälp av chat GPT*/
+                  content: 'to stay informed about latest updates';
+                }
+              }     
+            }
+
+            .input-flex {
+                input::placeholder {
+                  text-transform: capitalize; /*Kod från chat GPT*/
+                }
+              }
+            }  
+          }
+  
         .error-section {
-          right: 24rem;
+          top: 6.75rem;
+          right: 16.5rem;
         }
-    
-        .item-group {
-          display: flex;
-          align-items: center;
-  
-          .header {
-            max-width: 400px;
-
-            .break {
-              display:none;
-            }
-
-            h2 {
-              font-size: 1.20rem;
-              font-weight: var(--font-weight-700);
-            }
-
-            h2::after { /*Denna property tog jag hjälp av chat GPT*/
-              content: 'to stay informed about latest updates';
-            }
-          }     
-        }
-    
-  
-        .input-flex {
-          
-        .btn {
-          padding: 1rem 2.5rem;
-          font-size: 1rem;
-          }
-    
-          .form-input {
-            font-size: .8rem;
-            font-weight: var(--font-weight-400);
-            padding: 1rem 7rem 1rem 2rem;
-          }
-  
-          input::placeholder {
-            text-transform: capitalize; /*Kod från chat GPT*/
-          }
-  
-          .icon {
-            right:95%;
-          }
-        }
-      }  
+      } 
     }
+    
 
 
     /*****Subscribe End"*****/
@@ -1583,6 +1574,7 @@ img {
 footer {
 
   .footer-container {
+    background-color: var(--clr-bg);
     min-width: 450px;
     display: flex;
     flex-direction: column;
@@ -1590,21 +1582,21 @@ footer {
     align-items: center;
     gap: .25rem;
     padding: 1rem;
-    margin-bottom: 1rem;
+   
 
-    p {
-      font-size: .75rem;
+      p {
+        font-size: .75rem;
+      }
     }
-  }
 }
 
 @media (min-width: 768px) {
 
   footer {
 
-  .footer-container {
-    display: flex;
-    flex-direction: row;
-   }
+    .footer-container {
+      display: flex;
+      flex-direction: row;
+    }
+    }
   }
- }

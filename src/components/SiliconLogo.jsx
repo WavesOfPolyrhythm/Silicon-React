@@ -1,5 +1,5 @@
 import React from 'react'
-import LogoType from '../assets/images/SiliconLogo.svg'
+import LogoType from '../assets/images/p1-silicon-logo.svg'
 
 
 
@@ -8,11 +8,12 @@ import LogoType from '../assets/images/SiliconLogo.svg'
 
 const SiliconLogo = () => {
   return (
-    <>
+    <div className='silicon-box'>
       <a href="/" className="logo">
-         <img src={LogoType}/>
+      <img src={LogoType}/>
       </a>
-    </>
+      <h1 className='silicon-text'>Silicon</h1>
+    </div>
   )
 }
 
