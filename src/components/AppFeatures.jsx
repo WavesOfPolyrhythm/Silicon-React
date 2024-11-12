@@ -11,7 +11,7 @@ import Icon6 from '../assets/images/p2-icon6.svg'
 const AppFeatures = () => {
   return (
 
-    <section className="app-features">
+    <section className="app-features" id='features'>
 
       <Container>
 
