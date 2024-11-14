@@ -17,14 +17,14 @@ const Hero = () => {
               <p className="text-lg">We offer you a new generation of the mobile
                 banking. Save, spend & manage money in your pocket.</p>
             
-              <div className="market-btns">
-            <a href="#" className="store-btn">
-              <img src={AppleImg} alt=""/>
-            </a>
-            <a href="#" className="store-btn">
-              <img src={GoogleImg} alt=""/>
-            </a>
-              </div>
+                <div className="market-btns">
+                  <a href="#" className="store-btn">
+                <img src={AppleImg} alt=""/>
+              </a>
+              <a href="#" className="store-btn">
+                <img src={GoogleImg} alt=""/>
+              </a>
+                </div>
 
               <div className="more">
                 <a href="#features" className="btn-round btn-white">

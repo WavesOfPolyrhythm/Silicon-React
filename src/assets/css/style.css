@@ -1467,6 +1467,7 @@ img {
     }
   
       .form-input {
+        outline: none;
         border: 1px solid #d3d2d2;
         border-right: none;
         font-size: .8rem;
