@@ -8,13 +8,13 @@ import FAQItem from './FAQItem';
         const [activeQuestionId, setActiveQuestionId] = useState(null);
 
           // Funktion för att hämta data från API
+          useEffect(() => {
           const fetchData = async () => {
             const res = await fetch('https://win24-assignment.azurewebsites.net/api/faq');
             const data = await res.json();
             setFAQItems(data);
           };
 
-          useEffect(() => {
             fetchData();
           }, []); // Kör endast när komponenten laddas
 
