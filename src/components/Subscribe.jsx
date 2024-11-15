@@ -25,7 +25,6 @@ const handleSubscribe = async (e) => {
   } else if (!emailRegex.test(email)) {
     setError('You need to enter a valid email adress');
   } else {
-    console.log('Form submitted with email:', email);
       setEmail('');
       setError(''); 
 
