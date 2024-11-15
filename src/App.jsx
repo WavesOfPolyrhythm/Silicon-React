@@ -12,16 +12,16 @@ function App() {
 
   return (
     <>
+       <BrowserRouter>
      <ReviewProvider>
       <Header />
-       <BrowserRouter>
        <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/contact' element={<Contact />} />
        </Routes>
-       </BrowserRouter>
       <Footer />
      </ReviewProvider>
+       </BrowserRouter>
     </>
   )
 }
