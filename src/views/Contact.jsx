@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+//I combined Jockes form structure video, Hans Form validation and API video to make this contact form work
+
 const Contact = () => {
   const [formData, setFormData] = useState({fullName: '', email: '', specialist: ''});
   const [errors, setErrors] = useState({});
@@ -102,6 +104,7 @@ const Contact = () => {
             />
             {errors.email && <p className="invalid-input">{errors.email}</p>}
           </div>
+          {/* Code from Chat GPT to make the specialist choice work*/ }
           <div className={`input-group ${errors.specialist ? 'error' : ''}`}>
             <label className="form-label" htmlFor="specialist">Specialist</label>
               <select
