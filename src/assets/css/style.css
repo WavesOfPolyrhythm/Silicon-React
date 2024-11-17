@@ -106,6 +106,8 @@ img {
   --clr-bg-Review-Cards: #fff;
   --clr-bg-FAQ-Questions: #fff;
   --clr-bg-Subscribe: #F3F6FF;
+  --clr-bg-Contact: #F3F6FF;
+  --clr-bg-Form: #fff;
   --clr-white: #fff;
   --clr-logos-hover: #d4d7e53b;
   --clr-gray-100: #F3F6FF;
@@ -142,6 +144,8 @@ img {
     --clr-bg: #0B0F19;
     --clr-bg-nav: #060912e8;
     --clr-bg-HowSection: #0b0f19ee;
+    --clr-bg-Contact: #0b0f19ee;
+    --clr-bg-Form: #ffffff4f;
     --clr-bg-Reviews: #0b0f19ee;
     --clr-bg-Review-Cards: #0b0f1942;
     --clr-bg-FAQ-Questions: #151729f6;
@@ -1618,5 +1622,90 @@ footer {
       display: flex;
       flex-direction: row;
     }
+    }
+  }
+
+  /*CONTACT FORM ROUTING*/
+
+  .contact {
+    background-color: var(--clr-bg-Contact);
+  }
+
+  .space-y-1 > * + * { /* Kodidé från Jockes form validation video */
+    margin-top: 1rem;
+  }
+  
+  .button {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 5rem;
+    width: 100%;
+    padding: .8rem;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    border-radius: .5em;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: .9rem;
+  
+    &:hover,
+    &:focus-visible {
+        background-color: var(--clr-gray-700);
+        color: var(--clr-white);
+    }
+  }
+  
+  .form-group {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  
+  .reg-form {
+    background-color: var(--clr-bg-Form);
+    box-shadow: -9px 12px 12px rgba(0, 0, 0, 0.1), 
+        15px 6px 8px rgba(0, 0, 0, 0.06);
+    padding: 4.5rem;
+    border-radius: .5rem;
+    min-width: 400px;
+  
+    h2 {
+      margin-bottom: 2rem;
+      color: var(--clr-text-body);
+    }
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: .3rem;
+    color: var(--clr-text-body);
+  }
+  
+  .form-input {
+    font: inherit;
+    font-size: 1rem;
+    width: 100%;
+    padding: .4em;
+    border-radius: .5em;
+    border: 1px solid #c3c3c3;
+  }
+  
+  .invalid-input {
+    color: firebrick;
+    font-size: .9rem;
+    display: none;
+  }
+  
+  .error {
+    .form-input {
+      border-color: firebrick;
+  
+    }
+  
+    .invalid-input {
+      display: block;
     }
   }

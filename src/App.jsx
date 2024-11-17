@@ -13,14 +13,14 @@ function App() {
   return (
     <>
        <BrowserRouter>
-     <ReviewProvider>
-      <Header />
+        <ReviewProvider>
+        <Header />
        <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/contact' element={<Contact />} />
        </Routes>
-      <Footer />
-     </ReviewProvider>
+        <Footer />
+       </ReviewProvider>
        </BrowserRouter>
     </>
   )

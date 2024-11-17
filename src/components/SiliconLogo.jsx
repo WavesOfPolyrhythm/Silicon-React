@@ -2,10 +2,6 @@ import React from 'react'
 import LogoType from '../assets/images/p1-silicon-logo.svg'
 
 
-
-
-
-
 const SiliconLogo = () => {
   return (
     <div className='silicon-box'>
